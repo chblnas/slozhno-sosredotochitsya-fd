@@ -18,7 +18,6 @@
 .header {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr;
   gap: 55px;
   padding: 0 var(--padding);
 }
@@ -214,25 +213,30 @@
   }
 
   .header {
+    gap: 100px;
     padding-inline-start: 0;
   }
 
   .header__theme-menu {
-    align-self: center;
+    margin-block-start: 190px;
   }
 
   .header .title-decor {
     justify-self: end;
+    margin-block-end: 120px;
     max-inline-size: calc((100% - var(--padding)) / 2 );
   }
 
   .section:not(.section-gallery) {
     grid-template-columns: 236px 1fr;
+  }
+
+  .section {
     margin-block-start: 80px;
   }
 
-  .section:not(.section-why) {
-    margin-block-start: 80px;
+  .section-why {
+    margin-block-start: 60px;
   }
 
   .section-why .section__title {
@@ -244,7 +248,7 @@
   }
 
   .section-how .section__title {
-    grid-row: 1 / 6;
+    grid-row: span 2;
   }
 
   .section-gallery {
@@ -287,8 +291,10 @@
   .header__theme-menu {
     justify-self: center;
     align-self: start;
+    margin-inline-start: var(--padding);
     margin-inline-end: 0;
-    margin-block-start: 20px;
+    margin-block-start: 18px;
+    margin-block-end: 160px; 
   }
 
   .header__theme-menu-list {
