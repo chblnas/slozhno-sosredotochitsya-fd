@@ -253,6 +253,7 @@
 
   .section-gallery {
     gap: 20px;
+    margin-block-end: 60px;
   }
 
   .gallery {
@@ -294,7 +295,7 @@
     margin-inline-start: var(--padding);
     margin-inline-end: 0;
     margin-block-start: 18px;
-    margin-block-end: 160px; 
+    margin-block-end: 160px;
   }
 
   .header__theme-menu-list {
