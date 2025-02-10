@@ -21,9 +21,9 @@
   padding: var(--padding);
 }
 
-.header,
-.footer {
-  min-block-size: 100vh;
+.decorated-zone {
+  min-block-size: 668px;
+  block-size: 100vh;
 }
 
 .decorated-zone::before {
@@ -187,7 +187,11 @@
 }
 
 .gallery__image {
-  display: block;
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+.gallery__image-item {
   object-fit: cover;
   object-position: center;
   block-size: 100%;
@@ -210,6 +214,10 @@
   :root {
     --padding: 20px;
     --page-title-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .decorated-zone {
+    min-block-size: 1024px;
   }
 
    .header__title {
@@ -270,6 +278,10 @@
   .header__theme-menu {
     justify-self: center;
     align-self: start;
+  }
+
+  .decorated-zone {
+    min-block-size: 768px;
   }
 
   .header__theme-menu-list {
