@@ -1,15 +1,14 @@
 :root.theme-light {
-  --dark: #353430;
   --bg-image: url('../images/cover-image-light.png');
   --bg-color: #fff3f7;
   --page-title-color: #ffc2e6;
-  --title-decor-color: var(--dark);
+  --title-decor-color: #353430;
   --accent-color: #ff8dcb;
-  --text-color: var(--dark);
-  --button-color: var(--dark);
+  --text-color: #353430;
+  --button-color: #353430;
   --button-color-opacity: #35343066;
-  --corner-color: var(--dark);
-  --section-title-color: var(--dark);
+  --corner-color: #353430;
+  --section-title-color: #353430;
 }
 
 .theme-light .rec-element {
@@ -18,17 +17,16 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --dark: #353430;
     --bg-image: url('../images/cover-image-light.png');
     --bg-color: #fff3f7;
     --page-title-color: #ffc2e6;
-    --title-decor-color: var(--dark);
+    --title-decor-color: #353430;
     --accent-color: #ff8dcb;
-    --text-color: var(--dark);
-    --button-color: var(--dark);
-    --button-color-opacity: var(--dark);
-    --corner-color: var(--dark);
-    --section-title-color: var(--dark);
+    --text-color: #353430;
+    --button-color: #353430;
+    --button-color-opacity: #35343066;
+    --corner-color: #353430;
+    --section-title-color: #353430;
   }
 
   .rec-element {

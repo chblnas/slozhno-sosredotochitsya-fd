@@ -183,12 +183,14 @@
 
 .gallery {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: min-content;
   gap: 10px;
 }
 
 .gallery__image {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  block-size: 100%;
   inline-size: 100%;
 }
 
@@ -216,7 +218,7 @@
 
   .header .title-decor {
     justify-self: end;
-    max-inline-size: 50%;
+    inline-size: 50%;
   }
 
   .section:not(.section-gallery) {
@@ -232,7 +234,7 @@
   }
 
   .section-why .section__title {
-    grid-row: 1 / 3;
+    grid-row-start: span 2;
   }
 
   .section-what .section__content {
@@ -253,30 +255,14 @@
     gap: 20px;
   }
 
-  .gallery__image {
-    display: block;
-    object-fit: cover;
-    object-position: center;
-    block-size: 100%;
-    inline-size: 100%;
-  }
-
-  .gallery__image:nth-child(1) {
-    grid-column: 1 / 3;
-  }
-
-  .gallery__image:nth-child(2) {
-    grid-column: 3;
-    grid-row: 1 / 3;
-  }
-
-  .gallery__image:nth-child(3) {
-    grid-column: 1;
-    grid-row: 2 / 4;
-  }
-
+  .gallery__image:first-child,
   .gallery__image:last-child {
-    grid-column: 2 / 4;
+    grid-column-start: span 2;
+  }
+
+  .gallery__image:nth-child(2), 
+  .gallery__image:nth-child(3) {
+    grid-row-start: span 2;
   }
 }
 
@@ -295,7 +281,7 @@
   }
 
   .section-why .section__content {
-    grid-column: 2 / 4;
+    grid-column-start: span 2;
   }
 
   .section-what .section__content {
@@ -305,6 +291,6 @@
 
   .section-how .title-decor,
   .section-how .recomendations-list {
-    grid-column: 2 / 4;
+    grid-column-start: span 2;
   }
 }
