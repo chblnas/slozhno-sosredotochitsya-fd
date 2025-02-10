@@ -186,12 +186,8 @@
   gap: 10px;
 }
 
-.gallery__image {
-  block-size: 100%;
-  inline-size: 100%;
-}
-
 .gallery__image-item {
+  display: block;
   object-fit: cover;
   object-position: center;
   block-size: 100%;
