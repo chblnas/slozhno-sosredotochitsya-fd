@@ -1,3 +1,7 @@
+/* * {
+  outline: 1px solid #fff;
+} */
+
 .page {
   color: var(--text-color);
   font-family: var(--font-family), monospace;
@@ -21,14 +25,14 @@
 
 .header,
 .footer {
-  block-size: 100vh;
+  min-block-size: 100vh;
 }
 
 .decorated-zone::before {
   content: '';
   position: absolute;
-  top: var(--padding);
-  right: var(--padding);
+  inset-block-start: var(--padding);
+  inset-inline-end: var(--padding);
   border-inline-end: 1px solid var(--corner-color);
   border-block-start: 1px solid var(--corner-color);
   inline-size: 25px;
@@ -38,8 +42,8 @@
 .decorated-zone::after {
   content: '';
   position: absolute;
-  bottom: var(--padding);
-  left: var(--padding);
+  inset-block-end: var(--padding);
+  inset-inline-start: var(--padding);
   border-inline-start: 1px solid var(--corner-color);
   border-block-end: 1px solid var(--corner-color);
   inline-size: 25px;
@@ -48,8 +52,8 @@
 
 .rec-element {
   position: absolute;
-  top: var(--padding);
-  right: calc(10px + var(--padding));
+  inset-block-start: var(--padding);
+  inset-inline-end: calc(10px + var(--padding));
   display: flex;
   align-items: center;
   gap: 10px;
@@ -85,7 +89,7 @@
   color: var(--button-color);
   line-height: 100%;
   text-transform: lowercase;
-  background: transparent;
+  background-color: transparent;
   cursor: pointer;
   inline-size: 70px;
   block-size: 26px;
@@ -164,7 +168,7 @@
 }
 
 .text-link:hover {
-  border-bottom: 2px solid currentColor;
+  border-block-end: 2px solid currentColor;
 }
 
 .text-link:focus-visible {
@@ -255,8 +259,11 @@
   }
 
   .gallery__image {
+    display: block;
     object-fit: cover;
+    object-position: center;
     block-size: 100%;
+    inline-size: 100%;
   }
 
   .gallery__image:nth-child(1) {
@@ -283,6 +290,7 @@
     justify-self: center;
     align-self: start;
     margin-block-start: 20px;
+    margin-inline-end: 0;
   }
 
   .header__theme-menu-list {
