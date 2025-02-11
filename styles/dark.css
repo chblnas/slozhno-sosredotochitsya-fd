@@ -10,3 +10,7 @@
   --corner-color: #ff0070;
   --section-title-color: #ff0070;
 }
+
+.theme-dark .rec-element {
+  display: flex;
+}
