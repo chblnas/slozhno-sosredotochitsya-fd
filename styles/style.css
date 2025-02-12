@@ -237,7 +237,7 @@
   }
 
   .section:not(.section-gallery) {
-    grid-template-columns: 236px 1fr;
+    grid-template-columns: 1fr 2fr;
   }
 
   .section-why {
@@ -246,6 +246,10 @@
 
   .section-what .section__list {
     grid-column: 1 / -1;
+  }
+
+  .section-how .section__title {
+    grid-row: span 2;
   }
 
   .section-gallery {
@@ -284,7 +288,7 @@
   }
 
   .section:not(.section-gallery) {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 2.06fr;
   }
 
   .section-what .section__list {
